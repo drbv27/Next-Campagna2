@@ -9,18 +9,18 @@ export default MyApp */
 import "../styles/globals.css";
 import firebase from "../firebase/firebase";
 import { FirebaseContext } from "../firebase";
-/* import useAutenticacion from "../hooks/useAutenticacion"; */
+import useAutenticacion from "../hooks/useAutenticacion";
 
 const MyApp = (props) => {
-  /*  const usuario = useAutenticacion();
-  console.log(usuario); */
+  const usuario = useAutenticacion();
+  console.log(usuario);
 
   const { Component, pageProps } = props;
   return (
     <FirebaseContext.Provider
       value={{
         firebase,
-        /* usuario, */
+        usuario,
       }}
     >
       <Component {...pageProps} />

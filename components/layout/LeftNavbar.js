@@ -60,7 +60,7 @@ const Wrapper = styled.div`
 `;
 
 const LeftNavbar = () => {
-  const usuario = true;
+  const usuario = false;
   return (
     <NavContainer>
       <Logo>

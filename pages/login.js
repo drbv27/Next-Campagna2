@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/layout/Layout";
 import { css } from "@emotion/react";
+import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import {
   Formulario,
@@ -8,6 +9,8 @@ import {
   InputSubmit,
   Error,
 } from "../components/ui/Formulario";
+
+import firebase from "../firebase/firebase";
 
 //validaciones
 import useValidacion from "../hooks/useValidacion";
@@ -24,13 +27,23 @@ const STATE_INICIAL = {
 };
 
 export default function Login() {
+  const router = useRouter();
+  const [error, guardarError] = useState(false);
+
   const { valores, errores, submitForm, handleSubmit, handleChange } =
     useValidacion(STATE_INICIAL, validarLogin, iniciarSesion);
 
   const { email, password } = valores;
 
-  function iniciarSesion() {
-    console.log("Ingresando...");
+  async function iniciarSesion() {
+    try {
+      await firebase.login(email, password);
+      console.log("usuario autenticado");
+      router.push("/");
+    } catch (error) {
+      console.error("Hubo un error al autenticar el usuario", error.message);
+      guardarError(error.message);
+    }
   }
 
   return (
@@ -71,6 +84,9 @@ export default function Login() {
                 />
               </Campo>
               {errores.password && <Error>{errores.password}</Error>}
+
+              {error && <Error>{error}</Error>}
+
               <InputSubmit type="submit" value="Ingresar" />
             </Formulario>
           </>
