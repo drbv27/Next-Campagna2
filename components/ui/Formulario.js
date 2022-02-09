@@ -36,3 +36,15 @@ export const InputSubmit = styled.input`
     cursor: pointer;
   }
 `;
+
+export const Error = styled.p`
+  background-color: #98bf11;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  border-radius: 15px;
+`;
