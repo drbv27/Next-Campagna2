@@ -25,7 +25,7 @@ const Title = styled.div`
   h2 {
     color: rgb(0, 0, 0);
     span {
-      color: rgb(9, 112, 72);
+      color: rgb(0, 152, 218);
     }
   }
   p {

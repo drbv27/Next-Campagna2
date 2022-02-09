@@ -51,7 +51,7 @@ const Wrapper = styled.div`
         color: #000;
       }
       a:hover {
-        color: darkgoldenrod;
+        color: #98bf11;
         font-size: 22px;
         transition: 0.2s;
       }
@@ -60,7 +60,7 @@ const Wrapper = styled.div`
 `;
 
 const LeftNavbar = () => {
-  const usuario = false;
+  const usuario = true;
   return (
     <NavContainer>
       <Logo>
