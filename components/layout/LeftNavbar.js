@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FirebaseContext } from "../../firebase";
 import styled from "@emotion/styled/";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -60,7 +61,7 @@ const Wrapper = styled.div`
 `;
 
 const LeftNavbar = () => {
-  const usuario = false;
+  const { usuario, firebase } = useContext(FirebaseContext);
   return (
     <NavContainer>
       <Logo>
@@ -88,7 +89,7 @@ const LeftNavbar = () => {
                 icon={faUserEdit}
                 style={{ width: "18px", cursor: "pointer" }}
               />{" "}
-              <a href="#">Registar</a>
+              <a href="/registro">Registar</a>
             </li>
             <li>
               <FontAwesomeIcon
@@ -109,7 +110,7 @@ const LeftNavbar = () => {
                 icon={faSignOutAlt}
                 style={{ width: "18px", cursor: "pointer" }}
               />{" "}
-              <a href="#">Salir</a>
+              <a onClick={() => firebase.cerrarSesion()}>Salir</a>
             </li>
           </ul>
         ) : (

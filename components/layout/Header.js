@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import styled from "@emotion/styled/";
 import Link from "next/link";
 import PerfilPic from "../../img/watermark.png";
+import { FirebaseContext } from "../../firebase";
 
 const HeadContainer = styled.div`
   /*   display: flex;
@@ -50,16 +51,24 @@ const Admin = styled.div`
 `;
 
 const Header = () => {
+  const { usuario, firebase } = useContext(FirebaseContext);
+  /* console.log(usuario.displayName); */
   return (
     <HeadContainer>
       <HeadWrapper>
         <Title>
-          <h2>
-            Hola, <span>Diego</span>
-          </h2>
-          <div>
-            <p>Bienvenido al Panel.</p>
-          </div>
+          {usuario ? (
+            <>
+              <h2>
+                Hola: <span>{usuario.displayName}</span>
+              </h2>
+              <div>
+                <p>Bienvenido al Panel.</p>
+              </div>
+            </>
+          ) : (
+            <h1>Bienvenido</h1>
+          )}
         </Title>
         {/*         <Admin>
           <div>
