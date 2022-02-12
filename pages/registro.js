@@ -101,9 +101,11 @@ const Registro = () => {
     };
     //insertar en la base de datos
     const db = getFirestore();
-    const docRef = await addDoc(collection(db, "simpatizantes"), {
+    /*     const docRef = await addDoc(collection(db, "simpatizantes"), {
       simpatizante,
-    });
+    }); */
+
+    await setDoc(doc(db, "pruebas", cedula), { simpatizante });
   }
 
   return (
