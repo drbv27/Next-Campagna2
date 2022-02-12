@@ -5,6 +5,10 @@ export const Formulario = styled.form`
   width: 95%;
   margin: 5rem auto 0 auto;
 `;
+export const Formulario2 = styled.form`
+  width: 95%;
+  margin: 5rem auto 0 auto;
+`;
 
 export const Campo = styled.div`
   margin-bottom: 2rem;
@@ -18,6 +22,20 @@ export const Campo = styled.div`
   input {
     flex: 1;
     padding: 1rem;
+  }
+`;
+export const Campo2 = styled.div`
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+
+  label {
+    flex: 0 0 150px;
+    font-size: 1rem;
+  }
+  input {
+    flex: 1;
+    padding: 0.5rem;
   }
 `;
 
