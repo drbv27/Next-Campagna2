@@ -13,7 +13,7 @@ import useAutenticacion from "../hooks/useAutenticacion";
 
 const MyApp = (props) => {
   const usuario = useAutenticacion();
-  console.log(usuario);
+  /* console.log(usuario); */
 
   const { Component, pageProps } = props;
   return (
