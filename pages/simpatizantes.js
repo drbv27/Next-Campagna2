@@ -29,14 +29,18 @@ export default function Simpatizantes() {
       const q = query(collection(db, "pruebas"));
 
       const querySnapshot = await getDocs(q);
-
+      const people = [];
       const simpatizantess = querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         /*  console.log(doc.id, " => ", doc.data()); */
-        console.log(doc.data().simpatizante);
-        /*  return doc.data().simpatizante.nombre; */
+        const { nombre, cedula } = doc.data().simpatizante;
+        const person = {
+          nombre,
+          cedula,
+        };
+        people.push(person);
       });
-      console.log(simpatizantess);
+      setSimpatizantes(people);
     };
     obtenerSimpatizante();
   }, []);
@@ -45,7 +49,7 @@ export default function Simpatizantes() {
     <div>
       <Layout>
         <Principal>
-          <h1>Inicio......................</h1>
+          <div></div>
         </Principal>
       </Layout>
     </div>
