@@ -14,6 +14,7 @@ import {
   faSearch,
   faChartArea,
   faSignInAlt,
+  faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 
 const NavContainer = styled.div`
@@ -90,6 +91,13 @@ const LeftNavbar = () => {
                 style={{ width: "18px", cursor: "pointer" }}
               />{" "}
               <a href="/registro">Registar</a>
+            </li>
+            <li>
+              <FontAwesomeIcon
+                icon={faUserGroup}
+                style={{ width: "18px", cursor: "pointer" }}
+              />{" "}
+              <a href="/simpatizantes">Simpatizantes</a>
             </li>
             <li>
               <FontAwesomeIcon

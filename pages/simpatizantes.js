@@ -77,11 +77,12 @@ export default function Simpatizantes() {
               <tr>
                 <th>Cedula</th>
                 <th>Nombre</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
+                {/*                 <th>Dirección</th>
+                <th>Teléfono</th> */}
                 <th>Comuna</th>
                 <th>Puesto Votacion</th>
-                <th>Lider</th>
+                {/* <th>Lider</th> */}
+                <th>Detalle</th>
               </tr>
               {simpatizantes.map((simpatizante) => (
                 <DetalleSimpatizante

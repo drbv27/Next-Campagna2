@@ -1,4 +1,7 @@
 import React from "react";
+import { Detalle } from "../ui/Tabla";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileSignature } from "@fortawesome/free-solid-svg-icons";
 
 const DetalleSimpatizante = ({ simpatizante }) => {
   const { cedula, nombre, direccion, telefono, comuna, puesto, lider, creado } =
@@ -8,11 +11,17 @@ const DetalleSimpatizante = ({ simpatizante }) => {
     <tr>
       <td>{cedula}</td>
       <th>{nombre}</th>
-      <td>{direccion}</td>
-      <td>{telefono}</td>
+      {/*       <td>{direccion}</td>
+      <td>{telefono}</td> */}
       <td>{comuna}</td>
       <td>{puesto}</td>
-      <td>{lider}</td>
+      <td>
+        <Detalle>
+          {" "}
+          <FontAwesomeIcon icon={faFileSignature} />
+        </Detalle>
+      </td>
+      {/* <td>{lider}</td> */}
     </tr>
   );
 };
