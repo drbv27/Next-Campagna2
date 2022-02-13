@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Detalle } from "../ui/Tabla";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileSignature } from "@fortawesome/free-solid-svg-icons";
@@ -16,10 +17,12 @@ const DetalleSimpatizante = ({ simpatizante }) => {
       <td>{comuna}</td>
       <td>{puesto}</td>
       <td>
-        <Detalle>
-          {" "}
-          <FontAwesomeIcon icon={faFileSignature} />
-        </Detalle>
+        <Link href="/simpatizantes/[id]" as={`/simpatizantes/${cedula}`}>
+          <Detalle>
+            {" "}
+            <FontAwesomeIcon icon={faFileSignature} />
+          </Detalle>
+        </Link>
       </td>
       {/* <td>{lider}</td> */}
     </tr>
