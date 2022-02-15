@@ -12,6 +12,8 @@ import {
   Error,
 } from "../components/ui/Formulario";
 
+import Select from "../components/ui/Select";
+
 import { FirebaseContext } from "../firebase";
 import firebase from "../firebase/firebase";
 
@@ -172,6 +174,7 @@ const Registro = () => {
                       onChange={handleChange}
                     />
                   </MyInput>
+
                   {errores.telefono && <Error>{errores.telefono}</Error>}
                 </Grupo>
                 <Grupo>
