@@ -189,6 +189,7 @@ const Registro = () => {
                       value={comuna}
                       onChange={handleChange}
                     />
+                    <Select />
                   </MyInput>
                   {errores.comuna && <Error>{errores.comuna}</Error>}
                   <MyInput>
