@@ -1,5 +1,5 @@
 export const comunas = [
-  "Comuna 1 Popular",
-  "Comuna 2 Santa Cruz",
-  "Comuna 3 Manrique",
+  { valor: "Comuna1", texto: "Popular" },
+  { valor: "Comuna2", texto: "Santa Cruz" },
+  { valor: "Comuna3", texto: "Aranjuez" },
 ];

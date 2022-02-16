@@ -3,14 +3,14 @@ import SelectList from "./SelectList";
 import { comunas } from "../../data/comunas";
 
 const Select = () => {
-  console.log(comunas);
+  /*  console.log(comunas); */
   const [comuna, setComuna] = useState("");
   const [puesto, setPuesto] = useState("");
   return (
     <div>
       <SelectList
         title="comuna"
-        url=""
+        url={comunas}
         handleChange={(e) => {
           setComuna(e.target.value);
         }}
