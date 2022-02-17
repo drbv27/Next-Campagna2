@@ -2,11 +2,12 @@ import React from "react";
 
 const SelectList = ({ title, url, handleChange }) => {
   let options = url;
+  let puesto;
   console.log(options);
   return (
     <>
-      <label htmlFor=""></label>
-      <select name="" id="">
+      <label htmlFor={title}></label>
+      <select name={title} id={title}>
         <option value="">--- ---</option>
         {options.map(
           (opcion) => (
