@@ -23,6 +23,11 @@ const NavContainer = styled.div`
   height: 100%;
   background-color: #fff;
   box-shadow: 3px 0px 6px 0px rgba(246, 246, 246, 0.75);
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    width: 70px;
+  }
 `;
 const Logo = styled.div`
   padding: 10px;
@@ -30,6 +35,10 @@ const Logo = styled.div`
   text-align: left;
   font-size: 20px;
   font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    font-size: 10px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -56,6 +65,20 @@ const Wrapper = styled.div`
         color: #98bf11;
         font-size: 22px;
         transition: 0.2s;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    ul {
+      gap: 5px;
+      li {
+        &:hover {
+          color: red;
+        }
+        a {
+          opacity: 0;
+        }
       }
     }
   }
