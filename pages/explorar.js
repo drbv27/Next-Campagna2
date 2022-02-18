@@ -85,7 +85,9 @@ export default function Explorar() {
       <Layout>
         <Principal>
           <form onSubmit={buscarSimpatizante}>
+            <label for="busqueda">Busca por cualquier tipo de dato:</label>
             <input
+              name="busqueda"
               type="text"
               placeholder="Buscar Simpatizantes"
               onChange={(e) => setBuscar(e.target.value)}
@@ -97,6 +99,18 @@ export default function Explorar() {
               text-align: center;
             `}
           >
+            <h3>
+              Se encontrarón:{" "}
+              <span
+                css={css`
+                  font-size: 1.7rem;
+                  color: blue;
+                `}
+              >
+                {resultado.length}
+              </span>{" "}
+              simpatizantes
+            </h3>
             <Tabla>
               <tr>
                 <th>Cedula</th>
