@@ -83,7 +83,7 @@ const LeftNavbar = () => {
                 icon={faSearch}
                 style={{ width: "18px", cursor: "pointer" }}
               />{" "}
-              <a href="/prueba">Explorar</a>
+              <a href="/explorar">Explorar</a>
             </li>
             <li>
               <FontAwesomeIcon
