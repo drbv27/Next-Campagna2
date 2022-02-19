@@ -8,7 +8,7 @@ const Select = () => {
 
   const handleSetPuestos = function (e) {
     const opcion = e.target.value;
-    console.log(opcion);
+    console.log(e.target.value);
     setIdPuestos(opcion);
   };
 
