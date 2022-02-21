@@ -8,13 +8,13 @@ const Select = () => {
 
   const handleSetPuestos = function (e) {
     const opcion = e.target.value;
-    console.log(e.target.value);
+    console.log("comuna", e.target.value);
     setIdPuestos(opcion);
   };
 
   return (
     <>
-      <select name="comuna" id="selComuna" onChange={handleSetPuestos}>
+      <select name="comuna" id="comuna" onChange={handleSetPuestos}>
         <option value={-1}>-- -- --</option>
         {comunas.map((item, i) => (
           <option key={"comuna" + (i + 1)} value={i}>
@@ -22,11 +22,11 @@ const Select = () => {
           </option>
         ))}
       </select>
-      <select name="puesto" id="selPuesto">
+      <select name="puesto" id="puesto">
         <option value={-1}>-- -- --</option>
         {idPuestos > -1 &&
           comunas[idPuestos].puestos.map((item, i) => (
-            <option key={"puesto" + (i + 1)} value="">
+            <option key={"puesto" + (i + 1)} value={i}>
               {item}
             </option>
           ))}

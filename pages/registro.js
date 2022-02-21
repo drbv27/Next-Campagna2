@@ -101,6 +101,7 @@ const Registro = () => {
       lider,
       creado: Date.now(),
     };
+    console.log(simpatizante);
     //insertar en la base de datos
     const db = getFirestore();
     /*     const docRef = await addDoc(collection(db, "simpatizantes"), {
@@ -181,6 +182,7 @@ const Registro = () => {
                   <legend>Información Electoral</legend>
                   <MyInput>
                     <label htmlFor="comuna">Comúna: </label>
+                    {/* <Select /> */}
                     <input
                       type="text"
                       id="comuna"
@@ -189,7 +191,6 @@ const Registro = () => {
                       value={comuna}
                       onChange={handleChange}
                     />
-                    <Select />
                   </MyInput>
                   {errores.comuna && <Error>{errores.comuna}</Error>}
                   <MyInput>
