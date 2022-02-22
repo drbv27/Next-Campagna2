@@ -29,4 +29,19 @@ export const comunas = [
       "I.E.  REPUBLICA DE HONDURAS",
     ],
   },
+  {
+    nombre: "COMUNA 3 MANRIQUE",
+    puestos: [
+      "I.E. REPUBLICA DE BARBADOS",
+      "I.E.. SAN LORENZO DE ABURRA",
+      "SECC. ESC. SAN JOSE (I.E. MANUELA BELTRAN)",
+      "I. E. RAMON MUNERA LOPERA",
+      "I. E. BELLO ORIENTE",
+      "I. E. JOSE ROBERTO VASQUEZ",
+      "I.E. JOSE ANTONIO GALAN ",
+      "I.E.HERNAN TORO AGUDELO ",
+      "SEC ESC SUSANA DIAZ(IE RODRIGO I BONILLA)",
+      "I. E. SAN JUAN BAUTISTA DE LA SALLE",
+    ],
+  },
 ];
