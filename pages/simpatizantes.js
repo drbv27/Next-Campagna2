@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 
+import { comunas } from "../data/comunas";
+
 import Layout from "../components/layout/Layout";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
@@ -46,13 +48,14 @@ export default function Simpatizantes() {
           lider,
           creado,
         } = doc.data().simpatizante;
+        console.log("comuna: ", comuna);
         const person = {
           cedula,
           nombre,
           direccion,
           telefono,
-          comuna,
-          puesto,
+          comuna: comunas[parseInt(comuna)].nombre,
+          puesto: comunas[parseInt(comuna)].puestos[parseInt(puesto)],
           lider,
           creado,
         };

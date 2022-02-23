@@ -15,7 +15,7 @@ const DetalleSimpatizante = ({ simpatizante }) => {
       {/*       <td>{direccion}</td>
       <td>{telefono}</td> */}
       <td>{comuna}</td>
-      <td>{puesto}</td>
+      <td>{puesto.toLowerCase()}</td>
       <td>
         <Link href="/simpatizantes/[id]" as={`/simpatizantes/${cedula}`}>
           <Detalle>
