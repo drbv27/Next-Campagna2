@@ -4,6 +4,7 @@ import { Formulario } from "../ui/Formulario";
 
 const Titulo = styled.h1`
   text-align: center;
+  padding-bottom: 2rem;
 `;
 
 const Fomulario = styled.div`
@@ -13,22 +14,34 @@ const Bloque = styled.fieldset`
   background-color: #ecefe0;
   flex: 1;
 `;
+const Leyenda = styled.legend`
+  font-weight: bold;
+  font-size: 1.1rem;
+`;
 
 const Inputs = styled.div`
-  flex: 1;
-  padding-top: 1rem;
+  display: flex;
+  margin-top: 0.8rem;
 
   label {
-    padding-right: 1rem;
+    font-size: 1rem;
+    flex: 0 0 100px;
+  }
+  input {
+    flex: 1;
+    padding: 0.2rem;
+    margin-left: 1rem;
   }
 `;
 
 const Contbotones = styled.div`
+  display: flex;
   text-align: center;
   margin: 20px;
 `;
 
 const Btnguardar = styled.a`
+  flex: 1;
   border: 1px solid black;
   border-radius: 5px;
   margin: 10px;
@@ -37,9 +50,11 @@ const Btnguardar = styled.a`
   color: white;
   &:hover {
     background-color: green;
+    transition: 0.5seg;
   }
 `;
 const Btnborrar = styled.a`
+  flex: 1;
   border: 1px solid black;
   border-radius: 5px;
   margin: 10px;
@@ -56,11 +71,12 @@ const EditSimpatizante = ({ datos }) => {
       <form action="">
         <Fomulario>
           <Bloque>
-            <legend>Datos Personales</legend>
+            <Leyenda>Datos Personales</Leyenda>
             <Inputs>
               <label htmlFor="cedula">Cédula:</label>
               <input type="number" id="cedula" name="cedula" value={cedula} />
             </Inputs>
+
             <Inputs>
               <label htmlFor="cedula">Nombre Completo:</label>
               <input type="text" id="nombre" name="nombre" value={nombre} />
@@ -85,7 +101,7 @@ const EditSimpatizante = ({ datos }) => {
             </Inputs>
           </Bloque>
           <Bloque>
-            <legend>Información Electoral</legend>
+            <Leyenda>Información Electoral</Leyenda>
             <Inputs>
               <label htmlFor="comuna">Comúna:</label>
               <input type="text" id="comuna" name="comuna" value={comuna} />
