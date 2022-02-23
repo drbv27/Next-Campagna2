@@ -33,9 +33,9 @@ export default function Simpatizantes() {
 
       const querySnapshot = await getDocs(q);
       const people = [];
-      const simpatizantess = querySnapshot.forEach((doc) => {
+      const simpatizantes = querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        /*  console.log(doc.id, " => ", doc.data()); */
+        console.log(doc.id, " => ", doc.data());
         const {
           cedula,
           nombre,

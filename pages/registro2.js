@@ -99,18 +99,18 @@ const Registro = () => {
     const creado = Date.now();
     form.append("creado", creado);
     const data = Array.from(form);
-    const dataF = Object.fromEntries(data);
-    /* console.log(dataF); */
-    setSimpatizante(dataF);
+    const simpatizante = Object.fromEntries(data);
+    /* console.log(simpatizante); */
+    setSimpatizante(simpatizante);
     //si el usuario no esta autenticado llevar al login
     if (!usuario) {
       return router.push("/login");
     }
     //insertar en la base de datos
-    console.log(dataF.cedula);
-    console.log("simpatizante:", dataF);
+    console.log(simpatizante.cedula);
+    console.log("simpatizante:", simpatizante);
 
-    await setDoc(doc(db, "pruebas", dataF.cedula), { dataF });
+    await setDoc(doc(db, "pruebas", simpatizante.cedula), { simpatizante });
   }
   const cedula = useRef();
   const nombre = useRef();
