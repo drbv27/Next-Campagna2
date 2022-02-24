@@ -119,6 +119,7 @@ const Registro = () => {
   const comuna = useRef();
   const puesto = useRef();
   const lider = useRef();
+  const funcion = useRef();
   const router = useRouter();
   const [error, guardarError] = useState(false);
 
@@ -181,6 +182,14 @@ const Registro = () => {
                 </select>
                 <label htmlFor="lider">Lider: </label>
                 <input type="text" name="lider" ref={lider} />
+                <label htmlFor="lider">Perfil: </label>
+                <select name="funcion" id="funcion" ref={funcion}>
+                  <option value="">-- -- --</option>
+                  <option value="pregonero">Pregonero</option>
+                  <option value="testigo">Testigo</option>
+                  <option value="coordinador">Coordinador</option>
+                  <option value="lider">Lider</option>
+                </select>
               </fieldset>
               <button type="submit">Enviar</button>
             </form>

@@ -99,7 +99,7 @@ const LeftNavbar = () => {
                 icon={faChartArea}
                 style={{ width: "18px", cursor: "pointer" }}
               />{" "}
-              <a href="/">Dashboard</a>
+              <a href="/dashboard">Dashboard</a>
             </li>
             <li>
               <FontAwesomeIcon
