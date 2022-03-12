@@ -109,112 +109,86 @@ const Registro = () => {
     <div>
       <Layout>
         <Principal>
-          <>
-            <h1
-              css={css`
-                margin-top: 2rem;
-                color: #1097d5;
-              `}
-            >
-              Registro Simpatizantes
-            </h1>
-            <CentrarForm>
-              <form onSubmit={submit}>
-                <DatosPersonales>
-                  <h2>Datos personales</h2>
-                  <InfoImpLab>
-                    {/*  <label htmlFor="cedula">Cédula:</label> */}
-                    <InputRegistro
-                      type="number"
-                      name="cedula"
-                      placeholder="Cedúla"
-                      ref={cedula}
-                    />
-                  </InfoImpLab>
-                  <InfoImpLab>
-                    {/* <label htmlFor="nombre">Nombre Completo:</label> */}
-                    <InputRegistro
-                      type="text"
-                      name="nombre"
-                      placeholder="Nombre y Apellido"
-                      ref={nombre}
-                    />
-                  </InfoImpLab>
-                  <InfoImpLab>
-                    {/* <label htmlFor="direccion">Dirección::</label> */}
-                    <InputRegistro
-                      type="text"
-                      name="direccion"
-                      placeholder="Dirección"
-                      ref={direccion}
-                    />
-                  </InfoImpLab>
-                  <InfoImpLab>
-                    {/* <label htmlFor="telefono">Telefono:</label> */}
-                    <InputRegistro
-                      type="text"
-                      name="telefono"
-                      placeholder="Teléfono"
-                      ref={telefono}
-                    />
-                  </InfoImpLab>
-                  <SelectorComuna
-                    name="comuna"
-                    id="comuna"
-                    onChange={handleSetPuestos}
-                    ref={comuna}
-                  >
-                    <option value={-1}>Seleccione Comuna</option>
-                    {comunas.map((item, i) => (
-                      <option key={"comuna" + (i + 1)} value={i}>
-                        {item.nombre}
+          <h1
+            css={css`
+              margin-top: 2rem;
+              color: #1097d5;
+            `}
+          >
+            Registro Simpatizantes
+          </h1>
+          <CentrarForm>
+            <form onSubmit={submit}>
+              <DatosPersonales>
+                <h2>Datos personales</h2>
+                <InfoImpLab>
+                  {/*  <label htmlFor="cedula">Cédula:</label> */}
+                  <InputRegistro
+                    type="number"
+                    name="cedula"
+                    placeholder="Cedúla"
+                    ref={cedula}
+                  />
+                </InfoImpLab>
+                <InfoImpLab>
+                  {/* <label htmlFor="nombre">Nombre Completo:</label> */}
+                  <InputRegistro
+                    type="text"
+                    name="nombre"
+                    placeholder="Nombre y Apellido"
+                    ref={nombre}
+                  />
+                </InfoImpLab>
+                <InfoImpLab>
+                  {/* <label htmlFor="direccion">Dirección::</label> */}
+                  <InputRegistro
+                    type="text"
+                    name="direccion"
+                    placeholder="Dirección"
+                    ref={direccion}
+                  />
+                </InfoImpLab>
+                <InfoImpLab>
+                  {/* <label htmlFor="telefono">Telefono:</label> */}
+                  <InputRegistro
+                    type="text"
+                    name="telefono"
+                    placeholder="Teléfono"
+                    ref={telefono}
+                  />
+                </InfoImpLab>
+                <SelectorComuna
+                  name="comuna"
+                  id="comuna"
+                  onChange={handleSetPuestos}
+                  ref={comuna}
+                >
+                  <option value={-1}>Seleccione Comuna</option>
+                  {comunas.map((item, i) => (
+                    <option key={"comuna" + (i + 1)} value={i}>
+                      {item.nombre}
+                    </option>
+                  ))}
+                </SelectorComuna>
+                <SelectorComuna name="puesto" id="puesto" ref={puesto}>
+                  <option value={-1}>Seleccione Puesto Votacion</option>
+                  {idPuestos > -1 &&
+                    comunas[idPuestos].puestos.map((item, i) => (
+                      <option key={"puesto" + (i + 1)} value={i}>
+                        {item}
                       </option>
                     ))}
-                  </SelectorComuna>
-                  <SelectorComuna name="puesto" id="puesto" ref={puesto}>
-                    <option value={-1}>Seleccione Puesto Votacion</option>
-                    {idPuestos > -1 &&
-                      comunas[idPuestos].puestos.map((item, i) => (
-                        <option key={"puesto" + (i + 1)} value={i}>
-                          {item}
-                        </option>
-                      ))}
-                  </SelectorComuna>
-                </DatosPersonales>
-
-                <fieldset>
-                  <legend>Datos Electorales</legend>
-                  <label htmlFor="comuna">Comuna: </label>
-                  <select
-                    name="comuna"
-                    id="comuna"
-                    onChange={handleSetPuestos}
-                    ref={comuna}
-                  >
-                    <option value={-1}>-- -- --</option>
-                    {comunas.map((item, i) => (
-                      <option key={"comuna" + (i + 1)} value={i}>
-                        {item.nombre}
-                      </option>
-                    ))}
-                  </select>
-                  <label htmlFor="puesto">Puesto: </label>
-                  <select name="puesto" id="puesto" ref={puesto}>
-                    <option value={-1}>-- -- --</option>
-                    {idPuestos > -1 &&
-                      comunas[idPuestos].puestos.map((item, i) => (
-                        <option key={"puesto" + (i + 1)} value={i}>
-                          {item}
-                        </option>
-                      ))}
-                  </select>
-                  <label htmlFor="lider">Lider: </label>
-                  <input type="text" name="lider" ref={lider} />
-                </fieldset>
+                </SelectorComuna>
+                <InputRegistro
+                  type="text"
+                  placeholder="Lider"
+                  name="lider"
+                  ref={lider}
+                />
                 <button type="submit">Enviar</button>
-              </form>
-            </CentrarForm>
-          </>
+              </DatosPersonales>
+            </form>
+          </CentrarForm>
         </Principal>
       </Layout>
     </div>

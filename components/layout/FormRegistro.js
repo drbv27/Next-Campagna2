@@ -12,7 +12,7 @@ export const DatosPersonales = styled.div`
   width: 70%;
   margin: 3rem;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 10px;
   -webkit-box-shadow: 6px 9px 31px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 9px 31px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 6px 9px 31px -6px rgba(0, 0, 0, 0.75);
