@@ -106,7 +106,7 @@ const LeftNavbar = () => {
                 icon={faSearch}
                 style={{ width: "18px", cursor: "pointer" }}
               />{" "}
-              <a href="/explorar">Explorar</a>
+              <a href="/explorar">Buscar</a>
             </li>
             <li>
               <FontAwesomeIcon
