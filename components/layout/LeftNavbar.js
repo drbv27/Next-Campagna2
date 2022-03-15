@@ -127,7 +127,7 @@ const LeftNavbar = () => {
                 icon={faMapMarked}
                 style={{ width: "18px", cursor: "pointer" }}
               />{" "}
-              <a href="#">Mapa</a>
+              <a href="/mapa">Mapa</a>
             </li>
             <li>
               <FontAwesomeIcon

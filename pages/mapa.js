@@ -61,71 +61,9 @@ export default function Login() {
                 color: #1097d5;
               `}
             >
-              Registro Simpatizantes
+              Mapa de Calor
             </h1>
-            <>
-              {" "}
-              <Formulario onSubmit={handleSubmit} noValidate>
-                <Column>
-                  <fieldset>
-                    <Campo>
-                      <label htmlFor="email">Email Usuario</label>
-                      <input
-                        type="email"
-                        id="email"
-                        placeholder="Ingresa tu Email"
-                        name="email"
-                        value={email}
-                        onChange={handleChange}
-                      />
-                    </Campo>
-                    {errores.email && <Error>{errores.email}</Error>}
-                    <Campo>
-                      <label htmlFor="password">Contraseña</label>
-                      <input
-                        type="password"
-                        id="password"
-                        placeholder="Ingresa tu Contraseña"
-                        name="password"
-                        value={password}
-                        onChange={handleChange}
-                      />
-                    </Campo>
-                    {errores.password && <Error>{errores.password}</Error>}
-                  </fieldset>
-                  <fieldset>
-                    <Campo>
-                      <label htmlFor="email">Email Usuario</label>
-                      <input
-                        type="email"
-                        id="email"
-                        placeholder="Ingresa tu Email"
-                        name="email"
-                        value={email}
-                        onChange={handleChange}
-                      />
-                    </Campo>
-                    {errores.email && <Error>{errores.email}</Error>}
-                    <Campo>
-                      <label htmlFor="password">Contraseña</label>
-                      <input
-                        type="password"
-                        id="password"
-                        placeholder="Ingresa tu Contraseña"
-                        name="password"
-                        value={password}
-                        onChange={handleChange}
-                      />
-                    </Campo>
-                    {errores.password && <Error>{errores.password}</Error>}
-                  </fieldset>
-                </Column>
-
-                {error && <Error>{error}</Error>}
-
-                <InputSubmit type="submit" value="Ingresar" />
-              </Formulario>
-            </>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d581.1032960038215!2d-75.60310243951704!3d6.258136892713598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44297deb1b6a99%3A0x5260d64756d7f71f!2sCoWest%20Coworking!5e0!3m2!1ses!2sco!4v1647303676342!5m2!1ses!2sco" width={800} height={400} ></iframe>
           </>
         </Principal>
       </Layout>
