@@ -134,7 +134,7 @@ const LeftNavbar = () => {
                 icon={faCog}
                 style={{ width: "18px", cursor: "pointer" }}
               />{" "}
-              <a href="#"> Configuracion</a>
+              <a href="/configuracion"> Configuracion</a>
             </li>
             <li>
               <FontAwesomeIcon
