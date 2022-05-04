@@ -66,6 +66,7 @@ export default function Explorar() {
   console.log(simpatizantes);
   const [buscar, setBuscar] = useState("");
   const [resultado, guardarResultado] = useState([]);
+
   const buscarSimpatizante = (e) => {
     e.preventDefault();
     const busqueda = buscar.toLowerCase();
@@ -80,12 +81,32 @@ export default function Explorar() {
     guardarResultado(filtro);
   };
 
+  const buscarSimpatizante2 = (e) => {
+    e.preventDefault();
+    const busqueda = buscar.toLowerCase();
+    const filtro = simpatizantes.filter((simpatizante) => {
+      return (
+        simpatizante.comuna.toLowerCase().includes(busqueda)
+      );
+    });
+    guardarResultado(filtro);
+  };
+
   return (
     <div>
       <Layout>
         <Principal>
           <form onSubmit={buscarSimpatizante}>
             <label for="busqueda">Busca por cualquier tipo de dato:</label>
+            <input
+              name="busqueda"
+              type="text"
+              placeholder="Buscar Simpatizantes"
+              onChange={(e) => setBuscar(e.target.value)}
+            />
+          </form>
+          <form onSubmit={buscarSimpatizante2}>
+            <label for="busqueda">Busca por comuna:</label>
             <input
               name="busqueda"
               type="text"
