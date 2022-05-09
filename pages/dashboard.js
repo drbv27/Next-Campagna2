@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import LineChart from "../components/layout/LineChart";
 import BarChart from "../components/layout/BarChart";
+import SegmentChart from "../components/layout/SegmentChart";
+import GradientChart from "../components/layout/GradientChart";
 
 const Principal = styled.div`
   margin-left: 200px;
@@ -19,6 +21,10 @@ export default function Home() {
           <LineChart/>
           <hr/>
           <BarChart/>
+          <hr/>
+          <SegmentChart/>
+          <hr/>
+          <GradientChart/>
         </Principal>
       </Layout>
     </div>
