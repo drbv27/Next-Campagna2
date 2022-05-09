@@ -115,7 +115,7 @@ const Registro = () => {
               color: #1097d5;
             `}
           >
-            Registro Simpatizantes 21
+            Registro Simpatizantes
           </h1>
           <CentrarForm>
             <form onSubmit={submit}>

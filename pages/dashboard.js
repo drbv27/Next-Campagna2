@@ -1,6 +1,7 @@
 import Layout from "../components/layout/Layout";
 import styled from "@emotion/styled";
 import Image from "next/image";
+import LineChart from "../components/layout/LineChart";
 
 const Principal = styled.div`
   margin-left: 200px;
@@ -14,12 +15,7 @@ export default function Home() {
       <Layout>
         <Principal>
           <h1>Dashboard</h1>
-          <Image
-            src="/static/img/Bienvenida.png"
-            alt="welcome"
-            width={500}
-            height={450}
-          />
+          <LineChart/>
         </Principal>
       </Layout>
     </div>
